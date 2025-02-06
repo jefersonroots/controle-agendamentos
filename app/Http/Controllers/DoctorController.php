@@ -6,27 +6,14 @@ use App\Services\DoctorService;
 
 class DoctorController extends Controller
 {
+    protected DoctorService $service;
+
     public function __construct(DoctorService $service)
     {
-        parent::__construct($service);
+        $this->service = $service;
     }
-
-    /**
-     * Define as regras de validação específicas para as operações.
-     */
-    protected function getValidationRules(string $method): array
+    public function getByCity(int|string $id_cidade)
     {
-        $rules = [
-            'store' => [
-                'name' => 'required|string|max:255',
-                'estado' => 'required|string|max:2',
-            ],
-            'update' => [
-                'name' => 'sometimes|string|max:255',
-                'estado' => 'sometimes|string|max:2',
-            ],
-        ];
-
-        return $rules[$method] ?? [];
+        return response()->json($this->service->getByCity($id_cidade));
     }
 }

@@ -4,6 +4,7 @@ namespace App\Repositories\Contracts;
 
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 
 interface RepositoryInterface 
@@ -47,4 +48,6 @@ interface RepositoryInterface
      * @return bool
      */
     public function delete(int|string $id): bool;
+
+    public function getByCity(int|string $id_cidade): Collection;
 }

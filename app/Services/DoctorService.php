@@ -3,9 +3,6 @@
 namespace App\Services;
 
 use App\Repositories\DoctorRepository;
-use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\ResourceCollection;
-
 
 class DoctorService extends Service
 {
@@ -14,4 +11,8 @@ class DoctorService extends Service
         parent::__construct($repository);
     }
 
+    public function getByCity(int|string $id_cidade)
+    {
+        return response()->json($this->repository->getByCity($id_cidade));
+    }
 }
