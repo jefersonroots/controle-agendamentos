@@ -14,12 +14,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::group(['prefix' => 'login'], function () {
+    require __DIR__ . '/api/login.php';
 });
 
-Route::group(['prefix' => 'cities'], function () {
+Route::group(['prefix' => 'cidades'], function () {
     require __DIR__ . '/api/cities.php';
+});
+
+Route::group(['prefix' => 'medicos'], function () {
+    require __DIR__ . '/api/doctors.php';
+});
+
+Route::middleware('auth:api')->group(function () {
+    Route::group(['prefix' => 'medicos'], function () {
+        require __DIR__ . '/api/doctors.php';
+    });
+    
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });
 // Route::apiResource('cities', \App\Http\Controllers\CityController::class);
 // Route::apiResource('doctors', \App\Http\Controllers\DoctorController::class);

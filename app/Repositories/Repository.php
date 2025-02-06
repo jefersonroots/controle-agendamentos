@@ -4,8 +4,9 @@ namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
+use App\Repositories\Contracts\RepositoryInterface;
 
-abstract class Repository
+abstract class Repository implements RepositoryInterface
 {
     protected Model $model;
 
