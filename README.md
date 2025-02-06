@@ -10,7 +10,7 @@ A **SoftPar API** é uma aplicação RESTful construída com Laravel, seguindo a
 
 ## Funcionalidades
 
-- **Gerenciamento de Cidades e Médicos:**
+- **Gerenciamento de Agendamentos Paciente x Médico:**
   - Listagem de médicos por cidade: `GET /api/cidades/{id_cidade}/medicos`
   - CRUD completo para médicos (rotas protegidas com autenticação JWT)
 - **Autenticação Segura com JWT:**
@@ -32,4 +32,4 @@ A **SoftPar API** é uma aplicação RESTful construída com Laravel, seguindo a
    ```bash
    git clone https://github.com/seuusuario/seu-repositorio.git
    cd seu-repositorio
- 
+

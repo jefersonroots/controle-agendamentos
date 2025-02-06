@@ -12,6 +12,7 @@ class DoctorController extends Controller
     {
         $this->service = $service;
     }
+
     public function getByCity(int|string $id_cidade)
     {
         return response()->json($this->service->getByCity($id_cidade));
