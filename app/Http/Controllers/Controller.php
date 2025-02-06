@@ -11,6 +11,7 @@ use App\Traits\Http\Response\ApiResponse;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+
 class Controller implements ControllerInterface
 {
     use ApiResponse;
