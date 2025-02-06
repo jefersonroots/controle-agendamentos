@@ -11,9 +11,9 @@ return new class extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->comment('Tabela de médicos');
             $table->id()->comment('Identificador do registro');
-            $table->string('name')->comment('Nome do médico');
+            $table->string('nome')->comment('Nome do médico');
             $table->string('especialidade')->comment('Name da especialidade');
-            $table->foreignId('cities_id')->comment('Identificador da cidade')->constrained()->onDelete('restrict');
+            $table->foreignId('cidade_id')->comment('Identificador da cidade')->constrained('cities')->onDelete('restrict');
             $table->timestamps();
             $table->softDeletes();
         });

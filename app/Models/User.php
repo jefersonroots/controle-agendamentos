@@ -51,21 +51,11 @@ class User extends Authenticatable implements JWTSubject
         ];
     }
 
-    /**
-     * Retorna a chave primária do usuário.
-     *
-     * @return mixed
-     */
     public function getJWTIdentifier()
     {
         return $this->getKey();
     }
 
-    /**
-     * Retorna um array de custom claims para o token JWT.
-     *
-     * @return array
-     */
     public function getJWTCustomClaims(): array
     {
         return [];

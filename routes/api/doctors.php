@@ -7,4 +7,5 @@ Route::controller(DoctorController::class)->group(function () {
 
     Route::get('/', [DoctorController::class, 'index']);
     Route::get('/{doctor}', [DoctorController::class, 'get']);
+    Route::post('/', [DoctorController::class, 'create']);
 });
