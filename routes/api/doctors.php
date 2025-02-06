@@ -9,6 +9,7 @@ Route::controller(DoctorController::class)->group(function () {
 
 Route::middleware('auth:api')->group(function () {
     Route::controller(DoctorController::class)->group(function () {
+        Route::get('/cidades/{id_cidade}/medicos', [DoctorController::class, 'getByCity']);
         Route::get('/{doctor}', [DoctorController::class, 'get']);
         Route::put('/{doctor}', [DoctorController::class, 'update']);
         Route::delete('/{doctor}', [DoctorController::class, 'delete']);

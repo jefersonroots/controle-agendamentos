@@ -32,4 +32,4 @@ A **SoftPar API** é uma aplicação RESTful construída com Laravel, seguindo a
    ```bash
    git clone https://github.com/seuusuario/seu-repositorio.git
    cd seu-repositorio
- 
+

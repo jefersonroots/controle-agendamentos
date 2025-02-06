@@ -42,8 +42,6 @@ abstract class Service implements ServiceInterface
         return $this->repository->delete($id);
     }
 
-    public function getRepository(): RepositoryInterface
-    {
-        return $this->repository;
-    }
+
+
 }
