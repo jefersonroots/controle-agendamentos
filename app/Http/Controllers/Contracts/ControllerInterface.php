@@ -16,5 +16,6 @@ interface ControllerInterface
     public function update(Request $request, int|string $id);
 
     public function delete(int|string $id);
+    
 
 }

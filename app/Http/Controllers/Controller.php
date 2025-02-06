@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\General;
 use App\Http\Controllers\Contracts\ControllerInterface;
-use App\Http\Requests\IndexRequest;
 use App\Http\Requests\Request;
 use App\Services\Contracts\ServiceInterface;
 use App\Traits\Http\Response\ApiResponse;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\JsonResource;
+
 
 
 class Controller implements ControllerInterface
